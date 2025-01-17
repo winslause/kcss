@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KCSS CMS - Admin Settings</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .sidebar {
+            min-height: 100vh; /* Full viewport height */
+            background-color: #343a40;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            color: white;
+            padding: 15px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #495057;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .navbar-brand {
+            color: white;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Navbar for small screens -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-md-none">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">KCSS CMS</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Sidebar -->
+            <nav id="sidebarMenu" class="col-md-2 d-md-block sidebar collapse">
+                <div class="sidebar-sticky">
+                    <a class="navbar-brand" href="#">KCSS CMS</a>
+                    <a href="index.html">Dashboard</a>
+                    <a href="client.html">Client Management</a>
+                    <a href="case.html">Case Management</a>
+                    <a href="report.html">Reporting</a>
+                    <a href="admin.html">Admin Settings</a>
+                    <a href="roles.html">User Roles & Permissions</a>
+                    <a href="#logout">Logout</a>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 content">
+                <h1>Admin Settings</h1>
+
+                <div class="row">
+                    <!-- User Role Management -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>User Roles & Permissions</h5>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <label for="roleName">Role Name</label>
+                                    <input type="text" class="form-control" id="roleName" placeholder="Enter role name">
+                                    
+                                    <label for="permissions">Permissions</label>
+                                    <select multiple class="form-control" id="permissions">
+                                        <option>Manage Clients</option>
+                                        <option>Manage Cases</option>
+                                        <option>View Reports</option>
+                                        <option>Admin Settings Access</option>
+                                    </select>
+                                    
+                                    <button type="submit" class="btn btn-primary mt-3">Save Role</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Password Reset -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>Reset User Password</h5>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <label for="username">Username</label>
+                                    <input type="text" class="form-control" id="username" placeholder="Enter username">
+
+                                    <label for="newPassword">New Password</label>
+                                    <input type="password" class="form-control" id="newPassword" placeholder="Enter new password">
+
+                                    <button type="submit" class="btn btn-danger mt-3">Reset Password</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- System Configuration -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>System Configuration</h5>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <label for="systemName">System Name</label>
+                                    <input type="text" class="form-control" id="systemName" value="KCSS CMS">
+
+                                    <label for="adminEmail">Admin Email</label>
+                                    <input type="email" class="form-control" id="adminEmail" value="admin@kcss.com">
+
+                                    <label for="theme">Theme Color</label>
+                                    <select class="form-control" id="theme">
+                                        <option value="dark">Dark</option>
+                                        <option value="light">Light</option>
+                                        <option value="blue">Blue</option>
+                                    </select>
+
+                                    <button type="submit" class="btn btn-success mt-3">Save Configuration</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

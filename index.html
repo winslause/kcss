@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KCSS CMS</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .sidebar {
+            min-height: 100vh; /* Full viewport height */
+            background-color: #343a40;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            color: white;
+            padding: 15px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #495057;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .navbar-brand {
+            color: white;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Navbar for small screens -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-md-none">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">KCSS CMS</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Sidebar -->
+            <nav id="sidebarMenu" class="col-md-2 d-md-block sidebar collapse">
+                <div class="sidebar-sticky">
+                    <a class="navbar-brand" href="#">KCSS CMS</a>
+                    <a href="index.html">Dashboard</a>
+                    <a href="client.html">Client Management</a>
+                    <a href="case.html">Case Management</a>
+                    <a href="report.html">Reporting</a>
+                    <a href="admin.html">Admin Settings</a>
+                    <a href="roles.html">User Roles & Permissions</a>
+                    <a href="#logout">Logout</a>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 content">
+                <h1>Dashboard</h1>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card text-white bg-primary mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Total Clients</h5>
+                                <p class="card-text">120</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-white bg-success mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Open Cases</h5>
+                                <p class="card-text">45</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-white bg-warning mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Closed Cases</h5>
+                                <p class="card-text">30</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-white bg-danger mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Pending Tasks</h5>
+                                <p class="card-text">15</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Cases -->
+                <h2>Recent Cases</h2>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Case ID</th>
+                            <th scope="col">Client Name</th>
+                            <th scope="col">Assigned Staff</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Last Updated</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>John Doe</td>
+                            <td>Jane Smith</td>
+                            <td>Open</td>
+                            <td>2025-01-10</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Michael Brown</td>
+                            <td>John Walker</td>
+                            <td>Closed</td>
+                            <td>2025-01-12</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
